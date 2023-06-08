@@ -10,5 +10,10 @@ class Category extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'parent_id'];
+    protected $fillable = [
+        'name',
+        'image',
+        'describe',
+        'parent_id'
+        ];
 }
