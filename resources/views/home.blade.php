@@ -23,7 +23,7 @@
         <div class="row">
 
           <div class="col-md-12">
-            Thắng
+           <h3 class="btn btn-success float-right m2">thắng</h3>
           </div>
 
         </div>
@@ -35,4 +35,3 @@
   <!-- /.content-wrapper -->
 
 @endsection
-  
