@@ -35,11 +35,21 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           
+
+          <li class="nav-item">
+            <a href="{{ route('product.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Sản phẩm
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="{{ route('category.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Danh mục sản phẩm
+                Category
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
