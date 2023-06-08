@@ -47,9 +47,17 @@
                       >
                     </div>
                     <div class="form-group">
-                      <label>Tên danh mục</label>
-                      <input type="File" 
-                             name="name"
+                      <label>Image</label>
+                      <input type="file" 
+                             name="image"
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label>Mô tả</label>
+                      <input type="text" 
+                             class="form-control"
+                             name="describe"
+                             placeholder="Nhập tên danh mục"
                       >
                     </div>
                     <div class="form-group">

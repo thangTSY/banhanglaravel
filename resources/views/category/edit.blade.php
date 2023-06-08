@@ -42,8 +42,16 @@
                                 <strong>Ten SP</strong>
                                 <input type="text" name="name" value="{{ $category->name }}" class="form-control" placeholder="Nhap ten sp">
                             </div>
-                            
+                            <div class="form-group">
+                                <label>Anh</label>
+                                <input type="file" name="image" value="{{ $category->image }}">
+                            </div>
+                            <div class="form-group">
+                                <strong>Mô tả</strong>
+                                <input type="text" name="describe" value="{{ $category->describe }}" class="form-control" placeholder="Nhap mô tả ">
+                            </div>
                         </div>
+                        
                     </div>
                     <button type="submit" class="btn btn-success mt-2">Cap Nhat</button>
                 </form>

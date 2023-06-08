@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('AdminLTE-3.1.0/plugins/fontawesome-free/css/all.min.css ') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('AdminLTE-3.1.0/dist/css/adminlte.min.css ') }}">
-    <link rel="stylesheet" href="./app.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
