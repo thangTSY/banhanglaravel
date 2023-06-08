@@ -21,6 +21,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 Route::resource('/category', CategoryController::class);
+
 Route::resource('/product', ProductController::class);
 
 // Route::prefix('category')->group(function () {
