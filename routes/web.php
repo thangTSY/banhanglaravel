@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MenuController;
 
 
@@ -20,25 +22,32 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
+
 Route::resource('/category', CategoryController::class);
 
 Route::resource('/product', ProductController::class);
 
-// Route::prefix('category')->group(function () {
-//     Route::get('/create', [CategoryController::class, 'create' ])->name('category.create');
+Route::resource('/client', ClientController::class);
 
-//     Route::get('/', [CategoryController::class, 'index' ])->name('category.index');
+// Route::resource('/adminauth', AdminAuthController::class);
 
-//     Route::post('/store', [CategoryController::class, 'store' ])->name('category.store');
+Route::group(['prefix' => 'adminauth', 'namespace' => 'Admin'], function () {
+    Route::get('/', [AdminAuthController::class, 'index'])->name('admin.login');
 
-//     Route::get('/edit/{id}', [CategoryController::class, 'edit' ])->name('category.edit');
+    Route::post('/form', [AdminAuthController::class, 'customLogin'])->name('admin.customLogin');
 
-//     Route::post('/update/{id}', [CategoryController::class, 'update' ])->name('category.update');
+    Route::post('/create', [AdminAuthController::class, 'create'])->name('create');
 
-//     Route::get('/delete/{id}', [CategoryController::class, 'delete' ])->name('category.delete');
+    Route::get('/dashboard', [AdminAuthController::class, 'dashboard'])->name('admin.dashboard');
 
+    Route::get('/register', [AdminAuthController::class, 'register'])->name('admin.register');
 
-// });
+    Route::post('/custom-register', [AdminAuthController::class, 'customRegister'])->name('register.custom');
+
+    Route::get('/', [AdminAuthController::class, 'index2'])->name('admin.index');
+
+});
+
 
 Route::prefix('menus')->group(function () {
     Route::get('/', [MenuController::class, 'index' ])->name('menus.index');
@@ -50,6 +59,9 @@ Route::prefix('menus')->group(function () {
 
 });
 
+Route::post('/searchpr', [ProductController::class, 'search' ])->name('product.search');
+
+Route::post('/searchcl', [ClientController::class, 'search' ])->name('client.search');
 
 
 Auth::routes();

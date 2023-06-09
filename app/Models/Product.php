@@ -9,12 +9,13 @@ use Illuminate\Notifications\Notifiable;;
 class Product extends Model
 {
     use HasFactory, Notifiable;
-    protected $fillable = [
-        'name',
-        'image',
-        'category_id',
-        'price',
-        'quantity',
-        'describe',
-        ];
+    protected $guarded =[];
+
+    protected $fillable = [];
+
+    public function category()
+    {
+        return $this->hasOne(Category::class, 'id', 'category_id');
+    }
+
 }

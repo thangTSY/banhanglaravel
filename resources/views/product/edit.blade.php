@@ -5,20 +5,10 @@
  
 @section('title')
   <title>Trang Chủ</title>
-
-
 @endsection
- 
- 
 @section('content')
-      <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     @include('partials.content-header', ['name' => 'product', 'key' => 'Edit'])
-    
-    <!-- /.content-header -->
-
-    <!-- Main content -->
     <div class="content">
       <div class="container">
         <div class="card">
@@ -67,9 +57,6 @@
         </div>
       </div>
     </div>
-    <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
-
 @endsection
   

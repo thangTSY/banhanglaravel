@@ -1,37 +1,33 @@
-
-<!-- Stored in resources/views/child.blade.php -->
- 
-@extends('layouts.admin')
- 
-@section('title')
-  <title>Trang Chủ</title>
-
-
-@endsection
- 
- 
-@section('content')
-      <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    @include('partials.content-header', ['name' => 'Home', 'key' => 'Home'])
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-
-          <div class="col-md-12">
-           <h3 class="btn btn-success float-right m2">thắng</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sider-bar">
+      <a href="index3.html" class="brand-link">
+        <img src="{{ asset('image/avt.jpg ') }}" class="logo" >
+        <span class="tsy">SHOP-TSY</span>
+      </a>
+      
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
           </div>
-
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+      </div>
 
-@endsection
+
+    </div>
+  </div>
+</body>
+</html>
