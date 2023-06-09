@@ -10,5 +10,10 @@ class Category extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'parent_id'];
+    protected $fillable = [];
+
+    public function product()
+    {
+        return $this->hasOne(Product::class, 'category_id', 'id');
+    }
 }
